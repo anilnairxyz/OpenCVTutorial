@@ -538,7 +538,7 @@ cv2.destroyAllWindows()
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid = cv2.VideoCapture(1)
 fourcc = cv2.cv.FOURCC('D', 'I', 'V', 'X')
-output_file = "C:/Users/Anil/Desktop/write-vid.avi"
+output_file = "video_out.avi"
 frame_width = int(vid.get(cv.CV_CAP_PROP_FRAME_WIDTH))
 print frame_width
 frame_height = int(vid.get(cv.CV_CAP_PROP_FRAME_HEIGHT))
