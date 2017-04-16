@@ -4,7 +4,7 @@ from cv2 import cv
 import numpy as np
 from matplotlib import pyplot as plt
 `
-***Reading, Displaying and Writing an image***
+**Reading, Displaying and Writing an image**
 `
 img_file = "image.jpg"
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -14,14 +14,14 @@ cv2.imwrite("image.jpg", img)
 cv2.waitKey(0)
 cv2.destroyWindow("example")
 `
-***Displaying image using matplotlib***
+**Displaying image using matplotlib**
 `
 plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
 plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
 plt.show()
 cv2.waitKey(0)
 `
-***Displaying video***
+**Displaying video**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid_file = "video.mp4"
@@ -40,7 +40,7 @@ while(True):
 vid.release()
 cv2.destroyAllWindows()
 `
-***Writing video***
+**Writing video**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid = cv2.VideoCapture(0) # from webcam
@@ -64,7 +64,7 @@ vid.release()
 out.release()
 cv2.destroyAllWindows()
 `
-***Ceating borders on images***
+**Ceating borders on images**
 `
 img_file = "image.jpg"
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -94,7 +94,7 @@ cv2.imshow("example", constant)
 cv2.waitKey(0)
 cv2.destroyWindow("example")
 `
-***Mixing images (using weights)***
+**Mixing images (using weights)**
 `
 img_file = "image.jpg"
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -106,7 +106,7 @@ cv2.imshow('example',img_mixed)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Mixing images (adding logo to corner of image)***
+**Mixing images (adding logo to corner of image)**
 `
 img_file = "image.jpg"
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -131,7 +131,7 @@ cv2.imshow('example',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Image Processing - color tracking***
+**Image Processing - color tracking**
 `
 vid_file = "test_blue.avi"
 vid = cv2.VideoCapture(vid_file)
@@ -161,7 +161,7 @@ vid.release()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Image Processing - Adaptive thresholding (getting outlines - sketches)***
+**Image Processing - Adaptive thresholding (getting outlines - sketches)**
 `
 img_file = "image.jpg"
 img = cv2.imread(img_file,0)
@@ -180,7 +180,7 @@ for i in xrange(4):
     plt.xticks([]),plt.yticks([])
 plt.show()
 `
-***Image Processing - Canny edge detection (outlines - sketches)***
+**Image Processing - Canny edge detection (outlines - sketches)**
 `
 img_file = "image.jpg"
 img = cv2.imread(img_file,0)
@@ -191,7 +191,7 @@ plt.subplot(122),plt.imshow(edges,cmap = 'gray')
 plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
 plt.show()
 `
-***Image Processing - Histogram backprojection (matching histograms)***
+**Image Processing - Histogram backprojection (matching histograms)**
 `
 img_file = "image.jpg"
 roi = cv2.imread(img_file)
@@ -219,7 +219,7 @@ cv2.imshow('example',res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Image Processing - Fourier Transform***
+**Image Processing - Fourier Transform**
 `
 img_file = "image.jpg"
 img = cv2.imread(img_file,0)
@@ -232,7 +232,7 @@ plt.subplot(122),plt.imshow(magnitude_spectrum, cmap = 'gray')
 plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
 plt.show()
 `
-***Image Processing - Template Matching***
+**Image Processing - Template Matching**
 `
 img_file = "image.jpg"
 img = cv2.imread(img_file,0)
@@ -260,7 +260,7 @@ cv2.imshow('example',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Image Processing - Template Matching (using thresholds)***
+**Image Processing - Template Matching (using thresholds)**
 `
 img_file = "image.jpg"
 img = cv2.imread(img_file,0)
@@ -283,7 +283,7 @@ cv2.imshow('example',img_rgb)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Video - Template Matching***
+**Video - Template Matching**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid_file = "video.mp4"
@@ -312,7 +312,7 @@ while(vid.isOpened()):
 vid.release()
 cv2.destroyAllWindows()
 `
-***OCR from image - Using pytesser***
+**OCR from image - Using pytesser**
 `
 from pytesser import *
 from PIL import Image
@@ -321,7 +321,7 @@ img = Image.open(img_file)
 print image_to_string(img)
 cv2.waitKey(0)
 `
-***GaussianBlur, pyrDown (downsizing+Blur),***
+**GaussianBlur, pyrDown (downsizing+Blur),**
 `
 img_file = "image.jpg"
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -332,7 +332,7 @@ cv2.imshow("example", res)
 cv2.waitKey(0)
 cv2.destroyWindow("example")
 `
-***Contour finding and drawing***
+**Contour finding and drawing**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 img_file = "logo.png"
@@ -345,7 +345,7 @@ cv2.imshow("example", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Object Tracking using MOG / MOG2***
+**Object Tracking using MOG / MOG2**
 `
 cv2.namedWindow("video", cv2.WINDOW_NORMAL)
 cv2.namedWindow("ObjectTracking", cv2.WINDOW_NORMAL)
@@ -380,7 +380,7 @@ while(vid.isOpened()):
 vid.release()
 cv2.destroyAllWindows()
 `
-***Grabbing frames from a video***
+**Grabbing frames from a video**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid_file = "video.avi"
@@ -404,7 +404,7 @@ while(vid.isOpened()):
 vid.release()
 cv2.destroyAllWindows()
 `
-***Accurate Template Matching for video frames***
+**Accurate Template Matching for video frames**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid_file = "video.avi"
@@ -436,7 +436,7 @@ while(vid.isOpened()):
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Template Matching for video frames - with downsampling / Gaussian filter***
+**Template Matching for video frames - with downsampling / Gaussian filter**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid_file = "video.avi"
@@ -472,7 +472,7 @@ while(vid.isOpened()):
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Template Matching for video frames - using Histogram comparison***
+**Template Matching for video frames - using Histogram comparison**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid_file = "video.avi"
@@ -509,7 +509,7 @@ while(vid.isOpened()):
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Displaying multiple video streams***
+**Displaying multiple video streams**
 `
 cv2.namedWindow("example1", cv2.WINDOW_NORMAL)
 cv2.namedWindow("example2", cv2.WINDOW_NORMAL)
@@ -529,7 +529,7 @@ vid1.release()
 vid2.release()
 cv2.destroyAllWindows()
 `
-***Writing video from TV tuner card***
+**Writing video from TV tuner card**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 vid = cv2.VideoCapture(1)
@@ -553,7 +553,7 @@ vid.release()
 out.release()
 cv2.destroyAllWindows()
 `
-***Cropping videos***
+**Cropping videos**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 input_file = "video.avi"
@@ -586,7 +586,7 @@ vid.release()
 out.release()
 cv2.destroyAllWindows()
 `
-***Template matching : Multiple Commercials***
+**Template matching : Multiple Commercials**
 Full template, unoptimized (10min / video min for 20 frames) 
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -651,7 +651,7 @@ log.close()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Template matching : Multiple Commercials***
+**Template matching : Multiple Commercials**
 5 sub-templates, optimized (1.5 min / video min for 20 frames) 
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -710,7 +710,7 @@ log.close()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Template matching : Multiple Commercials***
+**Template matching : Multiple Commercials**
 5 sub-templates, aggregate video frames before template match 
 (1.25 min / video min for 20 frames) 
 `
@@ -774,7 +774,7 @@ log.close()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Template matching : Multiple Commercials***
+**Template matching : Multiple Commercials**
 templates / frames sliced (1/100), 
 aggregate video frames before template match 
 (9.5s / video min for 20 frames) 
@@ -828,7 +828,7 @@ log.close()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Template matching : Multiple Commercials***
+**Template matching : Multiple Commercials**
 Histogram comparison
 (not working satisfactorily)
 `
@@ -879,7 +879,7 @@ log.close()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 `
-***Converting videos into image banks***
+**Converting videos into image banks**
 `
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
 input_file = "video.avi"
