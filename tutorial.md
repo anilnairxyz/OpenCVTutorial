@@ -587,6 +587,7 @@ out.release()
 cv2.destroyAllWindows()
 ```
 **Template matching : Multiple Commercials**
+<br />
 Full template, unoptimized (10min / video min for 20 frames) 
 ```
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -652,6 +653,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 **Template matching : Multiple Commercials**
+<br />
 5 sub-templates, optimized (1.5 min / video min for 20 frames) 
 ```
 cv2.namedWindow("example", cv2.WINDOW_NORMAL)
@@ -711,6 +713,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 **Template matching : Multiple Commercials**
+<br />
 5 sub-templates, aggregate video frames before template match 
 (1.25 min / video min for 20 frames) 
 ```
@@ -775,6 +778,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 **Template matching : Multiple Commercials**
+<br />
 templates / frames sliced (1/100), 
 aggregate video frames before template match 
 (9.5s / video min for 20 frames) 
