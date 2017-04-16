@@ -1,7 +1,7 @@
 # Python Open CV library tutorial #
 Some experiments with the OpenCV library
 
-** Common imports **
+**Common imports**
 ```
 import cv2
 from cv2 import cv
