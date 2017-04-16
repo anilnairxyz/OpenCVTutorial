@@ -833,6 +833,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 **Template matching : Multiple Commercials**
+<br />
 Histogram comparison
 (not working satisfactorily)
 ```
